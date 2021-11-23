@@ -1,8 +1,10 @@
 import React from "react";
 import { useState } from "react";
 
-const ItemCount = () => {
-  const [count, setCount] = useState(0);
+const ItemCount = ({ stock, initial }) => {
+  const [count, setCount] = useState(initial ? initial : 0);
+
+  const limit = stock;
 
   const decrementNumber = () => {
     if (count > 0) {
@@ -13,7 +15,7 @@ const ItemCount = () => {
   };
 
   const incrementNumber = () => {
-    if (count < 5) {
+    if (count < limit) {
       setCount(count + 1);
     } else {
       console.log("no");
