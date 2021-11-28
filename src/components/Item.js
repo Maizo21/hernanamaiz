@@ -2,7 +2,6 @@ import React from "react";
 
 const Item = (data) => {
   const { item } = data;
-  console.log(item);
   return (
     <>
       <div
