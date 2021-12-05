@@ -2,32 +2,35 @@ import logo from "./../store.png";
 import cart from "./../cart.png";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+  NavLink,
+} from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a
-            className="navbar-brand m-0 w-25 d-flex justify-content-start align-items-center"
-            href="#"
-          >
-            <img
-              src={logo}
-              className=" m-0"
-              style={{ width: "40px", height: "40px" }}
-            />
-          </a>
+          <Link to="/">
+            <a className="navbar-brand m-0 w-25 d-flex justify-content-start align-items-center">
+              <img
+                src={logo}
+                className=" m-0"
+                style={{ width: "40px", height: "40px" }}
+              />
+            </a>
+          </Link>
           <div class="navbar d-flex flex-nowrap">
-            <a class="nav-link text-light" href="#">
+            <Link to="/" class="nav-link text-light">
               Home
-            </a>
-            <a class="nav-link text-light" href="#">
-              Productos
-            </a>
-            <a class="nav-link text-light" href="#">
-              Contacto
-            </a>
+            </Link>
+            <Link to={`/category/smartphones`} class="nav-link text-light">
+              Smartphones
+            </Link>
             <a
               className="w-25 me-2 rounded text-decoration-none"
               style={{
