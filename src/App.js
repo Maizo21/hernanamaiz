@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import Error from "./components/Error";
 import ItemDetail from "./components/ItemDetail";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         />
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="*" element={<Error />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
