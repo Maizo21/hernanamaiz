@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hernanamaiz/static/css/main.66b79714.chunk.css",
-    "main.js": "/hernanamaiz/static/js/main.6161e080.chunk.js",
-    "main.js.map": "/hernanamaiz/static/js/main.6161e080.chunk.js.map",
+    "main.js": "/hernanamaiz/static/js/main.2f8ff94f.chunk.js",
+    "main.js.map": "/hernanamaiz/static/js/main.2f8ff94f.chunk.js.map",
     "runtime-main.js": "/hernanamaiz/static/js/runtime-main.57b1296b.js",
     "runtime-main.js.map": "/hernanamaiz/static/js/runtime-main.57b1296b.js.map",
     "static/css/2.383c0125.chunk.css": "/hernanamaiz/static/css/2.383c0125.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.383c0125.chunk.css",
     "static/js/2.7af039f1.chunk.js",
     "static/css/main.66b79714.chunk.css",
-    "static/js/main.6161e080.chunk.js"
+    "static/js/main.2f8ff94f.chunk.js"
   ]
 }
