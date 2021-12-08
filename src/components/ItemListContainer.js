@@ -2,8 +2,9 @@ import React from "react";
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import Loading from "./Loading";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
 const ItemListContainer = ({ props }) => {
   let category = useParams();
@@ -87,6 +88,10 @@ const ItemListContainer = ({ props }) => {
         : setItems(data); */
     });
   }, [category]);
+
+  const [itemContext, setItemContext] = useContext(CartContext);
+
+  console.log("contex", itemContext);
 
   return (
     <>
