@@ -32,13 +32,24 @@ export const CartProvider = ({ children }) => {
   };
 
   //eliminar por id
-  const deleteFromCart = () => {};
+  const deleteFromCart = (dataItem) => {
+    const itemsFilters = items.filter((item) => item.id !== dataItem.id);
+    setItems(itemsFilters);
+  };
   //cantidad de items
-  const quantityItem = () => {};
+  const quantityItem = () => {
+    console.log(items.reduce((acc, item) => acc + item.count, 0));
+    return items.reduce((acc, item) => acc + item.count, 0);
+  };
   //cantidad por precio =total
-  const totalPrice = () => {};
+  const totalPrice = () => {
+    console.log(items.reduce((acc, item) => acc + item.price * item.count, 0));
+    return items.reduce((acc, item) => acc + item.price * item.count, 0);
+  };
   //vaciar carrito
-  const emptyCart = () => {};
+  const emptyCart = () => {
+    setItems([]);
+  };
 
   return (
     <CartContext.Provider

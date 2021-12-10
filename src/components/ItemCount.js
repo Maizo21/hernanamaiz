@@ -5,6 +5,11 @@ import { useCartContext, CartProvider } from "./CartContext";
 
 const ItemCount = ({ stock, initial, data }) => {
   const { addItem } = useCartContext();
+  const { deleteFromCart } = useCartContext();
+  const { quantityItem } = useCartContext();
+  const { totalPrice } = useCartContext();
+  const { emptyCart } = useCartContext();
+  const { items } = useCartContext();
 
   const [count, setCount] = useState(initial ? initial : 0);
   const [shoppingCart, setShoppingCart] = useState(false);
@@ -51,6 +56,31 @@ const ItemCount = ({ stock, initial, data }) => {
           onClick={() => addItem(data, count, setShoppingCart)}
         >
           Add to cart
+        </div>
+
+        <div
+          className="btn btn-success px-3"
+          onClick={() => deleteFromCart(data, setShoppingCart)}
+        >
+          Delete Item
+        </div>
+
+        <div
+          className="btn btn-success px-3"
+          onClick={() => quantityItem(items)}
+        >
+          Cantidad
+        </div>
+
+        <div className="btn btn-success px-3" onClick={() => totalPrice(items)}>
+          Precio total
+        </div>
+
+        <div
+          className="btn btn-success px-3"
+          onClick={() => emptyCart(setShoppingCart)}
+        >
+          Vaciar
         </div>
       </div>
 
