@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useCartContext, CartProvider } from "./CartContext";
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, data }) => {
+  const { addItem } = useCartContext();
+
   const [count, setCount] = useState(initial ? initial : 0);
   const [shoppingCart, setShoppingCart] = useState(false);
 
@@ -25,14 +28,6 @@ const ItemCount = ({ stock, initial }) => {
     }
   };
 
-  const addItem = () => {
-    if (count != 0) {
-      let item = count > 1 ? "items" : "item";
-      alert(`You have added ${count} ${item} to your cart`);
-      setShoppingCart(true);
-    }
-  };
-
   return (
     <>
       <div
@@ -51,7 +46,10 @@ const ItemCount = ({ stock, initial }) => {
             +
           </button>
         </div>
-        <div className="btn btn-success px-3" onClick={() => addItem()}>
+        <div
+          className="btn btn-success px-3"
+          onClick={() => addItem(data, count, setShoppingCart)}
+        >
           Add to cart
         </div>
       </div>

@@ -80,7 +80,6 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     getItem(data).then((data) => {
       setDetails(...data);
-      console.log(...data);
     });
   }, []);
 

@@ -23,7 +23,7 @@ const ItemDetail = (detailData) => {
           Precio: <b>{formatPeso.format(item.price)}</b>
         </p>
 
-        <ItemCount stock={item.stock} initial={1} />
+        <ItemCount stock={item.stock} initial={1} data={item} />
 
         <small>Marca: {item.brand}</small>
         <small>Fecha de lanzamiento: {item.date}</small>

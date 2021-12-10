@@ -83,15 +83,8 @@ const ItemListContainer = ({ props }) => {
       } else {
         setItems(data);
       }
-      /*       category
-        ? setItems(data.filter((item) => item.category == category.id))
-        : setItems(data); */
     });
   }, [category]);
-
-  const [itemContext, setItemContext] = useContext(CartContext);
-
-  console.log("contex", itemContext);
 
   return (
     <>

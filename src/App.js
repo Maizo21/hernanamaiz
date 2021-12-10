@@ -13,11 +13,11 @@ import {
 } from "react-router-dom";
 import Error from "./components/Error";
 import Cart from "./components/Cart";
-import { CartContext } from "./components/CartContext";
+import { CartProvider } from "./components/CartContext";
 
 function App() {
   return (
-    <CartContext>
+    <CartProvider>
       <Router>
         <div className="App">
           <NavBar />
@@ -41,7 +41,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
-    </CartContext>
+    </CartProvider>
   );
 }
 
