@@ -77,7 +77,6 @@ const ItemListContainer = ({ props }) => {
 
   useEffect(() => {
     data.then((data) => {
-      console.log(data);
       if (category && category.id) {
         setItems(data.filter((item) => item.category == category.id));
       } else {
