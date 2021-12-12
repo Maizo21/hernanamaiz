@@ -7,7 +7,7 @@ export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
 
   //funcion agregar al carrito
-  const addItem = (dataItem, count, setShoppingCart) => {
+  /*   const addItem = (dataItem, count, setShoppingCart) => {
     if (count != 0) {
       alert(`You have added ${count} ${dataItem.name} to your cart`);
       setShoppingCart(true);
@@ -30,6 +30,19 @@ export const CartProvider = ({ children }) => {
       }
     }
   };
+ */
+  function addItem(item, quantity) {
+    if (items.length !== 0) {
+      const index = items.findIndex((obj) => {
+        return obj.item.id === item.id;
+      });
+      if (index !== -1) {
+        const newCart = items;
+        newCart[index].quantity = newCart[index].quantity + quantity;
+        setItems(newCart);
+      } else setItems([...items, { item, quantity: quantity }]);
+    } else setItems([{ item, quantity: quantity }]);
+  }
 
   //eliminar por id
   const deleteFromCart = (dataItem) => {
@@ -42,9 +55,17 @@ export const CartProvider = ({ children }) => {
     return items.reduce((acc, item) => acc + item.count, 0);
   };
   //cantidad por precio =total
-  const totalPrice = () => {
+  /*   const totalPrice = () => {
     console.log(items.reduce((acc, item) => acc + item.price * item.count, 0));
     return items.reduce((acc, item) => acc + item.price * item.count, 0);
+  }; */
+
+  const totalPrice = () => {
+    //console.log(items.reduce((acc, item) => acc + item.price * item.count, 0));
+    return items.reduce(
+      (acc, value) => acc + value.item.price * value.quantity,
+      0
+    );
   };
   //vaciar carrito
   const emptyCart = () => {
