@@ -10,6 +10,7 @@ const Cart = () => {
   const { items, deleteFromCart, quantityItem, totalPrice, emptyCart } =
     useCartContext();
   console.log("cart", items);
+
   return (
     <>
       <div className="ms-4 mt-2">
@@ -21,7 +22,7 @@ const Cart = () => {
               <div
                 key={index}
                 className="d-flex gap-3 align-items-center border-bottom border-1 border-dark pb-2"
-                style={{ maxWidth: "30%" }}
+                style={{ maxWidth: "30%", position: "relative" }}
               >
                 <img
                   className="mr-2"
@@ -43,6 +44,13 @@ const Cart = () => {
                   Precio:{" "}
                   <b>{formatPeso.format(obj.item.price * obj.quantity)}</b>
                 </p>
+                <div
+                  className="btn btn-danger"
+                  style={{ position: "absolute", bottom: "5px", left: "31%" }}
+                  onClick={() => deleteFromCart(obj.item, items)}
+                >
+                  Eliminar
+                </div>
               </div>
             ))}
             <div

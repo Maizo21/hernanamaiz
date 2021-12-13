@@ -45,8 +45,8 @@ export const CartProvider = ({ children }) => {
   }
 
   //eliminar por id
-  const deleteFromCart = (dataItem) => {
-    const itemsFilters = items.filter((item) => item.id !== dataItem.id);
+  const deleteFromCart = (dataItem, items) => {
+    const itemsFilters = items.filter((item) => item.item.id != dataItem.id);
     setItems(itemsFilters);
   };
   //cantidad de items
