@@ -5,13 +5,44 @@ import Loading from "./Loading";
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "./CartContext";
+import { db } from "./../firebase/firebaseConfig";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 const ItemListContainer = ({ props }) => {
   let category = useParams();
 
+  const [itemsDB, setItemsDB] = useState([]);
+  console.log(itemsDB);
+
+  useEffect(() => {
+    const getData = async () => {
+      const q = query(collection(db, "store"));
+      const docs = [];
+      const querySnapshot = await getDocs(q);
+
+      querySnapshot.forEach((doc) => {
+        docs.push({ ...doc.data(), id: doc.id });
+      });
+
+      setItemsDB(docs);
+    };
+
+    getData();
+  }, []);
+
+  /*   useEffect(() => {
+    data.then((data) => {
+      if (category && category.id) {
+        setItems(data.filter((item) => item.category == category.id));
+      } else {
+        setItems(data);
+      }
+    });
+  }, [category]); */
+
   const [itemsData, setItems] = useState(null);
 
-  const data = new Promise((resolve, reject) => {
+  /*   const data = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([
         {
@@ -74,23 +105,13 @@ const ItemListContainer = ({ props }) => {
       reject(new Error("Error"));
     }, 2000);
   });
-
-  useEffect(() => {
-    data.then((data) => {
-      if (category && category.id) {
-        setItems(data.filter((item) => item.category == category.id));
-      } else {
-        setItems(data);
-      }
-    });
-  }, [category]);
-
+ */
   return (
     <>
       <p className="text-start ps-5 mt-2">{props}</p>
 
-      {!itemsData ? <Loading /> : null}
-      {itemsData && itemsData != null ? <ItemList data={itemsData} /> : null}
+      {!itemsDB ? <Loading /> : null}
+      {itemsDB && itemsDB != null ? <ItemList data={itemsDB} /> : null}
     </>
   );
 };

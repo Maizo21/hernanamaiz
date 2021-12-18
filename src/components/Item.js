@@ -10,8 +10,8 @@ const Item = (data) => {
         style={{ width: "200px" }}
         id={item.id}
       >
-        <h5 className="bg-secondary w-100 py-2 text-center">{item.name}</h5>
-        <img src={item.image} style={{ height: "100px" }} />
+        <h5 className="bg-secondary w-100 py-2 text-center">{item.producto}</h5>
+        <img src={item.img} style={{ height: "100px" }} />
         <p>{item.description}</p>
         <Link to={`/item/${item.id}`}>
           <button className="btn btn-success px-2">
