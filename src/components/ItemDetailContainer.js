@@ -43,6 +43,8 @@ const ItemDetailContainer = () => {
   //Llamada a la funcion getItem y actualizacion de Details
   useEffect(() => {
     itemsDB && itemsDB != null && getItem(data);
+
+    console.log(itemsDB);
     /*     console.log(data);
     getItem(data);
     console.log(getItem(data));

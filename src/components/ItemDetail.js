@@ -5,18 +5,22 @@ import { Link } from "react-router-dom";
 const ItemDetail = (detailData) => {
   console.log(detailData);
   const [shoppingCart, setShoppingCart] = useState(false);
+
   const { addItem } = useCartContext();
+
   let item = detailData.detailData;
   const formatPeso = new Intl.NumberFormat("es-CL", {
     style: "currency",
     currency: "CLP",
     minimumFractionDigits: 2,
   });
+
   const onAdd = (quantity) => {
     addItem(item, quantity);
     setShoppingCart(true);
     alert(`You added: ${quantity} ${item.name} to your cart`);
   };
+
   return (
     <>
       <div className="d-flex flex-column justify-content-center align-items-center  p-0 pb-4 border border-dark rounded ms-2 mt-4 mb-4">
