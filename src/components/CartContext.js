@@ -49,10 +49,9 @@ export const CartProvider = ({ children }) => {
     const itemsFilters = items.filter((item) => item.item.id != dataItem.id);
     setItems(itemsFilters);
   };
-  //cantidad de items
+  //cantidad de item
   const quantityItem = () => {
-    console.log(items.reduce((acc, item) => acc + item.count, 0));
-    return items.reduce((acc, item) => acc + item.count, 0);
+    return items.reduce((acc, item) => acc + item.quantity, 0);
   };
   //cantidad por precio =total
   /*   const totalPrice = () => {

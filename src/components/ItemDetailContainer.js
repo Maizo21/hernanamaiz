@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
   //Datos traidos de firebase
   const [itemsDB, setItemsDB] = useState([]);
 
-  //Llamada a firebase
+  //Llamada a firebase y filtro de item con params
   useEffect(() => {
     const getData = async () => {
       const q = query(collection(db, "store"));
@@ -27,28 +27,10 @@ const ItemDetailContainer = () => {
         docs.push({ ...doc.data(), id: doc.id });
       });
 
-      setItemsDB(docs);
+      setDetails(docs.find((element) => element.id == data.id));
     };
 
     getData();
-  }, []);
-
-  //Filtro de datos con el id de la url
-  function getItem(itemId) {
-    console.log(itemId.id);
-
-    setDetails(itemsDB.find((element) => element.id == itemId.id));
-  }
-
-  //Llamada a la funcion getItem y actualizacion de Details
-  useEffect(() => {
-    itemsDB && itemsDB != null && getItem(data);
-
-    console.log(itemsDB);
-    /*     console.log(data);
-    getItem(data);
-    console.log(getItem(data));
-    console.log(details); */
   }, []);
 
   return (

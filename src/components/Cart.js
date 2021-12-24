@@ -9,7 +9,6 @@ const Cart = () => {
   });
   const { items, deleteFromCart, quantityItem, totalPrice, emptyCart } =
     useCartContext();
-  console.log("cart", items);
 
   return (
     <>
@@ -21,20 +20,20 @@ const Cart = () => {
             {items.map((obj, index) => (
               <div
                 key={index}
-                className="d-flex gap-3 align-items-center border-bottom border-1 border-dark pb-2"
+                className="d-flex gap-3 align-items-center border-bottom border-1 border-dark pb-4"
                 style={{ maxWidth: "30%", position: "relative" }}
               >
                 <img
                   className="mr-2"
-                  src={obj.item.image}
-                  alt={obj.item.name}
+                  src={obj.item.img}
+                  alt={obj.item.producto}
                   style={{
                     width: "120px",
                     height: "auto",
                   }}
                 />
                 <div>
-                  <p>{obj.item.name}</p>
+                  <p>{obj.item.producto}</p>
                 </div>
 
                 <div className="text-center">
@@ -46,7 +45,7 @@ const Cart = () => {
                 </p>
                 <div
                   className="btn btn-danger"
-                  style={{ position: "absolute", bottom: "5px", left: "31%" }}
+                  style={{ position: "absolute", bottom: "0px", left: "40%" }}
                   onClick={() => deleteFromCart(obj.item, items)}
                 >
                   Eliminar

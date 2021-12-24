@@ -18,7 +18,7 @@ const ItemDetail = (detailData) => {
   const onAdd = (quantity) => {
     addItem(item, quantity);
     setShoppingCart(true);
-    alert(`You added: ${quantity} ${item.name} to your cart`);
+    alert(`You added: ${quantity} ${item.producto} to your cart`);
   };
 
   return (

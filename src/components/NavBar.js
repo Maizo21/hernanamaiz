@@ -1,6 +1,6 @@
 import logo from "./../store.png";
 import cart from "./../cart.png";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
@@ -9,8 +9,17 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
+import { useCartContext } from "./CartContext";
 
 const NavBar = () => {
+  const { quantityItem } = useCartContext();
+
+  const [itemsQuantity, setItemsQuantity] = useState(0);
+
+  useEffect(() => {
+    setItemsQuantity(quantityItem());
+  }, [quantityItem]);
+
   return (
     <>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -31,7 +40,11 @@ const NavBar = () => {
             <Link to={`/category/smartphones`} class="nav-link text-light">
               Smartphones
             </Link>
-            <a
+            <Link to={`/category/telefonos`} class="nav-link text-light">
+              Teléfonos
+            </Link>
+            <Link
+              to="/cart"
               className="w-25 me-2 rounded text-decoration-none"
               style={{
                 filter: "invert(1)",
@@ -39,8 +52,8 @@ const NavBar = () => {
               }}
             >
               <img src={cart} style={{ width: "30px", height: "35px" }} />
-              <span className="text-dark">5</span>
-            </a>
+              <span className="text-dark ms-1">{itemsQuantity}</span>
+            </Link>
           </div>
         </div>
       </nav>
