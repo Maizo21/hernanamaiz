@@ -2,13 +2,7 @@ import logo from "./../store.png";
 import cart from "./../cart.png";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useCartContext } from "./CartContext";
 
 const NavBar = () => {

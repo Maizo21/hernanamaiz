@@ -28,7 +28,11 @@ const ItemDetail = (detailData) => {
         <small className="align-self-start fst-italic ms-2">
           Caterogia: {item.category}
         </small>
-        <img src={item.img} style={{ width: "100%", maxWidth: "150px" }} />
+        <img
+          src={item.img}
+          style={{ width: "100%", maxWidth: "150px" }}
+          alt={`Imagen del Producto ${item.producto}`}
+        />
         <p className="w-25 mt-2 text-center">{item.description}</p>
         <p>
           Precio: <b>{formatPeso.format(item.price)}</b>

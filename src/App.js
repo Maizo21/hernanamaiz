@@ -3,19 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import React, { useContext, useState, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  NavLink,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Error from "./components/Error";
 import Cart from "./components/Cart";
 import { CartProvider } from "./components/CartContext";
-
-import { db } from "./firebase/firebaseConfig";
+import Shooping from "./components/Shooping";
 
 function App() {
   return (
@@ -41,6 +34,7 @@ function App() {
           />
           <Route path="*" element={<Error />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/shooping" element={<Shooping />} />
         </Routes>
       </Router>
     </CartProvider>

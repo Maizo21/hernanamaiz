@@ -4,12 +4,10 @@ import Loading from "./Loading";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "./../firebase/firebaseConfig";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
 const ItemListContainer = ({ props }) => {
   let category = useParams();
-
-  console.log(category);
 
   const [itemsDB, setItemsDB] = useState([]);
   console.log(itemsDB);

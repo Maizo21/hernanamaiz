@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "./../firebase/firebaseConfig";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   //Data de la url (id)
@@ -12,9 +12,6 @@ const ItemDetailContainer = () => {
 
   //Donde se almacenara el detalle del producto
   const [details, setDetails] = useState(null);
-
-  //Datos traidos de firebase
-  const [itemsDB, setItemsDB] = useState([]);
 
   //Llamada a firebase y filtro de item con params
   useEffect(() => {

@@ -7,8 +7,7 @@ const Cart = () => {
     currency: "CLP",
     minimumFractionDigits: 2,
   });
-  const { items, deleteFromCart, quantityItem, totalPrice, emptyCart } =
-    useCartContext();
+  const { items, deleteFromCart, totalPrice, emptyCart } = useCartContext();
 
   return (
     <>
@@ -72,7 +71,7 @@ const Cart = () => {
           <Link to="/" className="btn btn-primary text-decoration-none">
             Seguir comprando
           </Link>
-          <Link to="/" className="btn btn-success text-decoration-none">
+          <Link to="/shooping" className="btn btn-success text-decoration-none">
             Ir a pagar
           </Link>
         </div>
