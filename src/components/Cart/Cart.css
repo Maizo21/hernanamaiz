@@ -1,5 +1,6 @@
 .carrito {
   color: white;
+  padding-bottom: 50px;
 }
 
 .cart-title {
@@ -39,4 +40,15 @@
   border: 1px solid rgba(59, 179, 59, 0.575);
   border-radius: 5px;
   padding: 10px 20px;
+}
+
+@media (max-width: 800px) {
+  .cart-item {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .trash {
+    max-width: 40px;
+  }
 }

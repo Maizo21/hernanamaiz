@@ -5,4 +5,11 @@
   column-gap: 15px;
   max-width: 800px;
   margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 800px) {
+  .item-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

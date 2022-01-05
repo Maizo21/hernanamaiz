@@ -3,6 +3,7 @@ import { db } from "./../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
 import { useCartContext } from "./../CartContext/CartContext";
 import Swal from "sweetalert2";
+import "./FormComponent.css";
 
 const initialState = {
   nombre: "",
@@ -61,7 +62,7 @@ const FormComponent = () => {
 
   return (
     <>
-      <div className="w-50 mt-4 ms-2">
+      <div className="form-container mt-4 ms-2">
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <input

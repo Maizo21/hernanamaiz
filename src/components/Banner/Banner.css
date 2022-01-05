@@ -43,3 +43,17 @@
 .item-block h3 {
   font-size: 40px;
 }
+
+@media (max-width: 800px) {
+  .items-options {
+    display: grid;
+  }
+
+  .item-block {
+    width: 100%;
+  }
+
+  .item-block h3 {
+    font-size: 25px;
+  }
+}

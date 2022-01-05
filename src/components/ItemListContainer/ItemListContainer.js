@@ -35,7 +35,7 @@ const ItemListContainer = ({ props }) => {
 
   return (
     <>
-      <p className="text-start ps-5 mt-2 text-light">{props}</p>
+      <p className="text-start mt-2 text-light bienvenida">{props}</p>
 
       <Banner />
 

@@ -10,13 +10,13 @@ import Cart from "./components/Cart/Cart";
 import { CartProvider } from "./components/CartContext/CartContext";
 import Shooping from "./components/Shooping/Shooping";
 import Swal from "sweetalert2";
-/* 
+
 Swal.fire({
   title: "¡Bienvenido a la tienda!",
   text: "Esperamos que disfrutes de nuestros productos 📱",
   confirmButtonText: "Gracias, joven 😎",
   showCancelButton: true,
-  cancelButtonText: "No, prefiero escuchar musica 😎",
+  cancelButtonText: "No, prefiero irme a escuchar musica 🎶",
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire("Adelante 🚪", "", "success");
@@ -29,7 +29,7 @@ Swal.fire({
       enlace.click();
     }, 1500);
   }
-}); */
+});
 
 function App() {
   return (
