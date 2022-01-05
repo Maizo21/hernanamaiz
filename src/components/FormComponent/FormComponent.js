@@ -73,6 +73,7 @@ const FormComponent = () => {
               name="nombre"
               value={values.nombre}
               onChange={handleChange}
+              required
             />
           </div>
 
@@ -85,6 +86,7 @@ const FormComponent = () => {
               name="apellido"
               value={values.apellido}
               onChange={handleChange}
+              required
             />
           </div>
 
@@ -98,6 +100,7 @@ const FormComponent = () => {
               name="email"
               value={values.email}
               onChange={handleChange}
+              required
             />
             <div id="emailHelp" className="form-text">
               <small className="fst-italic text-light">
@@ -115,6 +118,7 @@ const FormComponent = () => {
               name="adress"
               value={values.adress}
               onChange={handleChange}
+              required
             />
           </div>
 

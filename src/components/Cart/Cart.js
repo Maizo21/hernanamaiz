@@ -15,7 +15,7 @@ const Cart = () => {
     <>
       <div className="ms-4 mt-2 carrito">
         <h2 className="cart-title">Tu carrito</h2>
-        {items.length === 0 && <p>Tu carrito esta vacio</p>}
+        {items.length === 0 && <p>Tu carrito esta vacío</p>}
         {items.length > 0 && (
           <>
             <h4>Tu compra está casi completa</h4>
@@ -62,22 +62,28 @@ const Cart = () => {
             </div>
           </>
         )}
-        <div className="d-flex gap-2">
-          <div
-            onClick={() => {
-              emptyCart();
-            }}
-            className="btn btn-danger"
-          >
-            Vaciar Carrito
+
+        {items.length > 0 && (
+          <div className="d-flex gap-2">
+            <div
+              onClick={() => {
+                emptyCart();
+              }}
+              className="btn btn-danger"
+            >
+              Vaciar Carrito
+            </div>
+            <Link to="/" className="btn btn-primary text-decoration-none">
+              Seguir comprando
+            </Link>
+            <Link
+              to="/shooping"
+              className="btn btn-success text-decoration-none"
+            >
+              Ir a pagar
+            </Link>
           </div>
-          <Link to="/" className="btn btn-primary text-decoration-none">
-            Seguir comprando
-          </Link>
-          <Link to="/shooping" className="btn btn-success text-decoration-none">
-            Ir a pagar
-          </Link>
-        </div>
+        )}
       </div>
     </>
   );

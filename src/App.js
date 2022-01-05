@@ -15,12 +15,12 @@ Swal.fire({
   title: "¡Bienvenido a la tienda!",
   text: "Esperamos que disfrutes de nuestros productos 📱",
   confirmButtonText: "Gracias, joven 😎",
-  showCancelButton: true,
-  cancelButtonText: "No, prefiero irme a escuchar musica 🎶",
+  /*   showCancelButton: true,
+  cancelButtonText: "No, prefiero irme a escuchar musica 🎶", */
 }).then((result) => {
   if (result.isConfirmed) {
     Swal.fire("Adelante 🚪", "", "success");
-  } else if (result.dismiss) {
+  } /* else if (result.dismiss) {
     Swal.fire("Nos vemos luego 😎", "", "warning");
     let enlace = document.createElement("a");
     enlace.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
@@ -28,7 +28,7 @@ Swal.fire({
     setTimeout(() => {
       enlace.click();
     }, 1500);
-  }
+  } */
 });
 
 function App() {
