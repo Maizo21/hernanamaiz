@@ -46,7 +46,6 @@ const FormComponent = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(values);
     const docRef = await addDoc(collection(db, "purchases"), { values });
 
     Swal.fire({
@@ -55,8 +54,6 @@ const FormComponent = () => {
       text: `Tu compra se realizó correctamente, el id de tu orden es: ${docRef.id}`,
       confirmButtonText: "Ok 😁",
     });
-
-    console.log(docRef.id);
     msg(docRef.id);
   };
 

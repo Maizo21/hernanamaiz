@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./ItemDetail.css";
 import Swal from "sweetalert2";
 const ItemDetail = (detailData) => {
-  console.log(detailData);
   const [shoppingCart, setShoppingCart] = useState(false);
 
   const { addItem } = useCartContext();
