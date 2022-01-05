@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/hernanamaiz/static/css/main.66b79714.chunk.css",
-    "main.js": "/hernanamaiz/static/js/main.f271d1af.chunk.js",
-    "main.js.map": "/hernanamaiz/static/js/main.f271d1af.chunk.js.map",
-    "runtime-main.js": "/hernanamaiz/static/js/runtime-main.258af3cd.js",
-    "runtime-main.js.map": "/hernanamaiz/static/js/runtime-main.258af3cd.js.map",
+    "main.css": "/hernanamaiz/static/css/main.c9bb7e37.chunk.css",
+    "main.js": "/hernanamaiz/static/js/main.d20f379e.chunk.js",
+    "main.js.map": "/hernanamaiz/static/js/main.d20f379e.chunk.js.map",
+    "runtime-main.js": "/hernanamaiz/static/js/runtime-main.3953e1af.js",
+    "runtime-main.js.map": "/hernanamaiz/static/js/runtime-main.3953e1af.js.map",
     "static/css/2.383c0125.chunk.css": "/hernanamaiz/static/css/2.383c0125.chunk.css",
-    "static/js/2.9eab1aef.chunk.js": "/hernanamaiz/static/js/2.9eab1aef.chunk.js",
-    "static/js/2.9eab1aef.chunk.js.map": "/hernanamaiz/static/js/2.9eab1aef.chunk.js.map",
-    "static/js/3.e497f81e.chunk.js": "/hernanamaiz/static/js/3.e497f81e.chunk.js",
-    "static/js/3.e497f81e.chunk.js.map": "/hernanamaiz/static/js/3.e497f81e.chunk.js.map",
+    "static/js/2.64b0b524.chunk.js": "/hernanamaiz/static/js/2.64b0b524.chunk.js",
+    "static/js/2.64b0b524.chunk.js.map": "/hernanamaiz/static/js/2.64b0b524.chunk.js.map",
+    "static/js/3.c07360de.chunk.js": "/hernanamaiz/static/js/3.c07360de.chunk.js",
+    "static/js/3.c07360de.chunk.js.map": "/hernanamaiz/static/js/3.c07360de.chunk.js.map",
     "index.html": "/hernanamaiz/index.html",
     "static/css/2.383c0125.chunk.css.map": "/hernanamaiz/static/css/2.383c0125.chunk.css.map",
-    "static/css/main.66b79714.chunk.css.map": "/hernanamaiz/static/css/main.66b79714.chunk.css.map",
-    "static/js/2.9eab1aef.chunk.js.LICENSE.txt": "/hernanamaiz/static/js/2.9eab1aef.chunk.js.LICENSE.txt",
+    "static/css/main.c9bb7e37.chunk.css.map": "/hernanamaiz/static/css/main.c9bb7e37.chunk.css.map",
+    "static/js/2.64b0b524.chunk.js.LICENSE.txt": "/hernanamaiz/static/js/2.64b0b524.chunk.js.LICENSE.txt",
+    "static/media/mobile-game.4d94e8c2.svg": "/hernanamaiz/static/media/mobile-game.4d94e8c2.svg",
     "static/media/refresh.e3b6ba5e.svg": "/hernanamaiz/static/media/refresh.e3b6ba5e.svg",
-    "static/media/store.64e6d825.png": "/hernanamaiz/static/media/store.64e6d825.png"
+    "static/media/trash.1c7a64c1.svg": "/hernanamaiz/static/media/trash.1c7a64c1.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.258af3cd.js",
+    "static/js/runtime-main.3953e1af.js",
     "static/css/2.383c0125.chunk.css",
-    "static/js/2.9eab1aef.chunk.js",
-    "static/css/main.66b79714.chunk.css",
-    "static/js/main.f271d1af.chunk.js"
+    "static/js/2.64b0b524.chunk.js",
+    "static/css/main.c9bb7e37.chunk.css",
+    "static/js/main.d20f379e.chunk.js"
   ]
 }
