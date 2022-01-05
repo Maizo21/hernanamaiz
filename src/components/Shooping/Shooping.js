@@ -1,10 +1,10 @@
 import React from "react";
-import FormComponent from "./FormComponent";
+import FormComponent from "../FormComponent/FormComponent";
 
 const Shooping = () => {
   return (
     <>
-      <h2>Datos de compra</h2>
+      <h2 className="text-light">Datos de compra</h2>
       <FormComponent />
     </>
   );

@@ -1,6 +1,7 @@
 import React from "react";
-import Item from "./Item";
+import Item from "../Item/Item";
 import { useEffect, useState } from "react";
+import "./ItemList.css";
 
 const ItemList = (itemsData) => {
   const [data, setItems] = useState(null);
@@ -12,10 +13,9 @@ const ItemList = (itemsData) => {
   return (
     <>
       <div
-        className="mx-4"
+        className="item-list"
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr 1fr",
         }}
       >
         {data &&

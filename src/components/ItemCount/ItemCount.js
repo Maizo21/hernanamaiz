@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./ItemCount.css";
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
   const decrementNumber = () => {
@@ -13,13 +14,15 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     }
   };
   const handleOnAdd = () => {
-    onAdd(count);
-    setCount(initial);
+    if (count > 0) {
+      onAdd(count);
+      setCount(initial);
+    }
   };
   return (
     <>
-      <div className="d-flex gap-2 p-2 rounded flex-column justify-content-center align-items-center w-25">
-        <div className="d-flex gap-3 align-items-center group justify-content-center align-items-center">
+      <div className="d-flex gap-2 rounded flex-column justify-content-center align-items-center btn-container">
+        <div className="d-flex gap-4 align-items-center group align-items-center btn-count">
           <button className="btn btn-secondary " onClick={decrementNumber}>
             -
           </button>
@@ -28,11 +31,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
             +
           </button>
         </div>
-        <div
-          className="btn btn-success px-3 d-flex justify-content-center align-items-center mx-auto my-0"
-          onClick={handleOnAdd}
-        >
-          Add to cart
+        <div className="btn btn-success addBtn" onClick={handleOnAdd}>
+          Agregar al carrito
         </div>
       </div>
     </>

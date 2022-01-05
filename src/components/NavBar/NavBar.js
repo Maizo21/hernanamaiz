@@ -1,9 +1,10 @@
-import logo from "./../store.png";
-import cart from "./../cart.png";
+import logo from "./../img/mobile-game.svg";
+import cart from "./../../cart.png";
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { useCartContext } from "./CartContext";
+import { useCartContext } from "../CartContext/CartContext";
 
 const NavBar = () => {
   const { quantityItem } = useCartContext();
@@ -16,25 +17,27 @@ const NavBar = () => {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
+      <div className="navBar-msg">Contamos con envíos a todo el país</div>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div className="container-fluid">
           <Link to="/">
-            <a className="navbar-brand m-0 w-25 d-flex justify-content-start align-items-center">
+            <a className="navbar-brand m-0 w-25 d-flex justify-content-start align-items-center text-decoration-none">
               <img
                 src={logo}
-                className=" m-0"
-                style={{ width: "40px", height: "40px" }}
+                className="logo m-0"
+                style={{ width: "50px", height: "50px" }}
               />
+              <span className="navBar-title">EZ Geek</span>
             </a>
           </Link>
-          <div class="navbar d-flex flex-nowrap">
-            <Link to="/" class="nav-link text-light">
+          <div className="navbar d-flex flex-nowrap">
+            <Link to="/" className="nav-link text-light">
               Home
             </Link>
-            <Link to={`/category/smartphones`} class="nav-link text-light">
+            <Link to={`/category/smartphones`} className="nav-link text-light">
               Smartphones
             </Link>
-            <Link to={`/category/telefonos`} class="nav-link text-light">
+            <Link to={`/category/telefonos`} className="nav-link text-light">
               Teléfonos
             </Link>
             <Link

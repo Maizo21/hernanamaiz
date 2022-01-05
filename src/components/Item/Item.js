@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Item.css";
 
 const Item = (data) => {
   const { item } = data;
   return (
     <>
       <div
-        className="card card-body d-flex flex-column justify-content-center align-items-center  p-0 border border-dark ms-2"
+        className="card card-body d-flex flex-column justify-content-center align-items-center p-1 border border-dark item"
         style={{ width: "200px" }}
         id={item.id}
       >

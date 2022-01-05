@@ -1,16 +1,18 @@
 import React from "react";
-import ItemList from "./ItemList";
-import Loading from "./Loading";
+import ItemList from "../ItemList/ItemList";
+import Loading from "../Loading/Loading";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { db } from "./../firebase/firebaseConfig";
+import { db } from "../../firebase/firebaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
+
+import "./ItemListContainer.css";
+import Banner from "../Banner/Banner";
 
 const ItemListContainer = ({ props }) => {
   let category = useParams();
 
   const [itemsDB, setItemsDB] = useState([]);
-  console.log(itemsDB);
 
   useEffect(() => {
     const getData = async () => {
@@ -28,14 +30,16 @@ const ItemListContainer = ({ props }) => {
         setItemsDB(docs);
       }
     };
-
     getData();
   }, [category]);
 
   return (
     <>
-      <p className="text-start ps-5 mt-2">{props}</p>
+      <p className="text-start ps-5 mt-2 text-light">{props}</p>
 
+      <Banner />
+
+      <h3 className="item-list-title">Productos</h3>
       {!itemsDB ? <Loading /> : null}
       {itemsDB && itemsDB != null ? <ItemList data={itemsDB} /> : null}
     </>

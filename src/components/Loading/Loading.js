@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import icon from "./img/refresh.svg";
+import icon from "./../img/refresh.svg";
 import "./Loading.css";
 
 const Loading = (data) => {

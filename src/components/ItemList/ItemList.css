@@ -1,0 +1,8 @@
+.item-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}

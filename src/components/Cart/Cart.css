@@ -1,0 +1,42 @@
+.carrito {
+  color: white;
+}
+
+.cart-title {
+  text-align: center;
+}
+
+.carrito h4 {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.cart-item-container {
+  max-width: 600px;
+}
+
+.cart-item-container .cart-item {
+  border-bottom: 1px solid gray;
+}
+
+.trash {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+.trash img {
+  width: 28px;
+  filter: invert(1);
+}
+
+.carrito-total h5 {
+  font-size: 24px;
+  font-weight: 700;
+  border: 1px solid rgba(59, 179, 59, 0.575);
+  border-radius: 5px;
+  padding: 10px 20px;
+}

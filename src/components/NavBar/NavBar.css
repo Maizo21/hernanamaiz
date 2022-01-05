@@ -1,0 +1,28 @@
+.logo {
+  filter: invert(1);
+}
+
+.navbar a {
+  transition: 0.3s;
+  text-decoration: none !important;
+}
+
+.navbar a:hover {
+  opacity: 0.6;
+}
+
+.navBar-msg {
+  color: #fff;
+  background-color: #505050;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navBar-title {
+  color: #fff;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none !important;
+  margin-left: 10px;
+}

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import ItemCount from "./ItemCount";
-import { useCartContext } from "./CartContext";
+import ItemCount from "../ItemCount/ItemCount";
+import { useCartContext } from "../CartContext/CartContext";
 import { Link } from "react-router-dom";
+import "./ItemDetail.css";
+import Swal from "sweetalert2";
 const ItemDetail = (detailData) => {
   console.log(detailData);
   const [shoppingCart, setShoppingCart] = useState(false);
@@ -18,19 +20,24 @@ const ItemDetail = (detailData) => {
   const onAdd = (quantity) => {
     addItem(item, quantity);
     setShoppingCart(true);
-    alert(`You added: ${quantity} ${item.producto} to your cart`);
+    Swal.fire({
+      icon: "success",
+      title: "¡Agregado!",
+      text: `Agregaste ${quantity} "${item.producto}" a tu carrito 🛒`,
+      confirmButtonText: "Ok 👏",
+    });
   };
 
   return (
     <>
-      <div className="d-flex flex-column justify-content-center align-items-center  p-0 pb-4 border border-dark rounded ms-2 mt-4 mb-4">
+      <div className="d-flex flex-column justify-content-center align-items-center p-0 pb-4 border border-dark item-detail">
         <h5 className="bg-secondary w-100 py-2 text-light">{item.producto}</h5>
-        <small className="align-self-start fst-italic ms-2">
+        <small className="align-self-start fst-italic ms-2 category">
           Caterogia: {item.category}
         </small>
         <img
           src={item.img}
-          style={{ width: "100%", maxWidth: "150px" }}
+          style={{ width: "100%", maxWidth: "200px" }}
           alt={`Imagen del Producto ${item.producto}`}
         />
         <p className="w-25 mt-2 text-center">{item.description}</p>

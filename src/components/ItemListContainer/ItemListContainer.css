@@ -1,0 +1,24 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    rgb(33, 37, 41) 60%,
+    rgb(65, 65, 65) 100%
+  );
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.item-list-title {
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}

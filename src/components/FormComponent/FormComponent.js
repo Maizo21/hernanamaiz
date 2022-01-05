@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { db } from "./../firebase/firebaseConfig";
+import { db } from "./../../firebase/firebaseConfig";
 import { collection, addDoc } from "firebase/firestore";
-import { useCartContext } from "./CartContext";
+import { useCartContext } from "./../CartContext/CartContext";
+import Swal from "sweetalert2";
 
 const initialState = {
   nombre: "",
@@ -47,6 +48,13 @@ const FormComponent = () => {
     console.log(values);
     const docRef = await addDoc(collection(db, "purchases"), { values });
 
+    Swal.fire({
+      icon: "success",
+      title: "¡Tu compra ya está en camino! 🚗 ",
+      text: `Tu compra se realizó correctamente, el id de tu orden es: ${docRef.id}`,
+      confirmButtonText: "Ok 😁",
+    });
+
     console.log(docRef.id);
     msg(docRef.id);
   };
@@ -91,8 +99,8 @@ const FormComponent = () => {
               onChange={handleChange}
             />
             <div id="emailHelp" className="form-text">
-              <small className="fst-italic">
-                No compartiremos tu correo con nadie.
+              <small className="fst-italic text-light">
+                No compartiremos tu correo con nadie
               </small>
             </div>
           </div>
